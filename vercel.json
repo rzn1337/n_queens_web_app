@@ -2,7 +2,7 @@
     "version": 2,
     "builds": [
       {
-        "src": "djangoverceltest/wsgi.py",
+        "src": "nqueensweb/wsgi.py",
         "use": "@vercel/python",
         "config": { "maxLambdaSize": "15mb", "runtime": "python3.12" }
       },
@@ -21,7 +21,7 @@
       },
       {
         "src": "/(.*)",
-        "dest": "djangoverceltest/wsgi.py"
+        "dest": "nqueensweb/wsgi.py"
       }
     ]
   }
