@@ -1,0 +1,50 @@
+[
+    {
+        "algorithm": "backtracking",
+        "execution_time": 0.0010020732879638672,
+        "success": true,
+        "board": [
+            0,
+            4,
+            7,
+            5,
+            2,
+            6,
+            1,
+            3
+        ],
+        "N": 8
+    },
+    {
+        "algorithm": "backtracking",
+        "execution_time": 0.0,
+        "success": true,
+        "board": [
+            0,
+            4,
+            7,
+            5,
+            2,
+            6,
+            1,
+            3
+        ],
+        "N": 8
+    },
+    {
+        "algorithm": "backtracking",
+        "execution_time": 0.0,
+        "success": true,
+        "board": [
+            0,
+            4,
+            7,
+            5,
+            2,
+            6,
+            1,
+            3
+        ],
+        "N": 8
+    }
+]

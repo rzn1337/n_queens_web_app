@@ -62,7 +62,6 @@ class NQueens:
         return attacks
 
     def log_run_info(self, algorithm, execution_time, success, additional_info=None):
-        print('abcedfghsahdjaksbfakjfbbbbbbbbbbbbbbbbbbbbbbbbbbb')
         run_info = {
             'algorithm': algorithm,
             'execution_time': execution_time,
