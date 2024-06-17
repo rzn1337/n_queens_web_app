@@ -61,28 +61,29 @@ class NQueens:
                     attacks[j] += 1
         return attacks
 
-    def log_run_info(self, algorithm, execution_time, success, additional_info=None):
-        run_info = {
-            'algorithm': algorithm,
-            'execution_time': execution_time,
-            'success': success,
-            'board': self.board,
-            'N': self.N
-        }
+    # Commenting out the log_run_info function to remove JSON/CSV data logging
+    # def log_run_info(self, algorithm, execution_time, success, additional_info=None):
+    #     run_info = {
+    #         'algorithm': algorithm,
+    #         'execution_time': execution_time,
+    #         'success': success,
+    #         'board': self.board,
+    #         'N': self.N
+    #     }
 
-        if additional_info:
-            run_info.update(additional_info)
+    #     if additional_info:
+    #         run_info.update(additional_info)
 
-        # Log to JSON file
-        log_file = 'nqueens_run_metrics.json'
-        if os.path.exists(log_file):
-            with open(log_file, 'r') as f:
-                try:
-                    log_data = json.load(f)
-                except json.JSONDecodeError:
-                    log_data = []
-        else:
-            log_data = []
-        log_data.append(run_info)
-        with open(log_file, 'w') as f:
-            json.dump(log_data, f, indent=4)
+    #     # Log to JSON file
+    #     log_file = 'nqueens_run_metrics.json'
+    #     if os.path.exists(log_file):
+    #         with open(log_file, 'r') as f:
+    #             try:
+    #                 log_data = json.load(f)
+    #             except json.JSONDecodeError:
+    #                 log_data = []
+    #     else:
+    #         log_data = []
+    #     log_data.append(run_info)
+    #     with open(log_file, 'w') as f:
+    #         json.dump(log_data, f, indent=4)

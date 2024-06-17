@@ -27,21 +27,22 @@ def aco(request):
 def pso(request):
     return render(request, 'nqueens/pso.html')
 
-def download_file(request):
-    file_path = os.path.join(settings.BASE_DIR, 'nqueens_run_metrics.json')
+# Commenting out the download_file function to remove JSON/CSV data logging
+# def download_file(request):
+#     file_path = os.path.join(settings.BASE_DIR, 'nqueens_run_metrics.json')
     
-    if os.path.exists(file_path):
-        with open(file_path, 'rb') as file:
-            response = HttpResponse(file.read(), content_type='application/json')
-            response['Content-Disposition'] = f'attachment; filename="{os.path.basename(file_path)}"'
+#     if os.path.exists(file_path):
+#         with open(file_path, 'rb') as file:
+#             response = HttpResponse(file.read(), content_type='application/json')
+#             response['Content-Disposition'] = f'attachment; filename="{os.path.basename(file_path)}"'
         
-        # Ensure the response is fully constructed before attempting to remove the file
-        response['Content-Length'] = os.path.getsize(file_path)
-        os.remove(file_path)
+#         # Ensure the response is fully constructed before attempting to remove the file
+#         response['Content-Length'] = os.path.getsize(file_path)
+#         os.remove(file_path)
         
-        return response
-    else:
-        return HttpResponse("File does not exist")
+#         return response
+#     else:
+#         return HttpResponse("File does not exist")
 
 @csrf_exempt
 def find_solution(request):
@@ -69,7 +70,8 @@ def find_solution(request):
         end_time = time.time()
         execution_time = end_time - start_time
         
-        nqueens.log_run_info(algorithm, execution_time, success, additional_info)
+        # Commenting out the log_run_info call to remove JSON/CSV data logging
+        # nqueens.log_run_info(algorithm, execution_time, success, additional_info)
 
         iterations = additional_info.get('iterations', None)
 

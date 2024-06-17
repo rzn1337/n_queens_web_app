@@ -9,6 +9,6 @@ urlpatterns = [
     path('aco/', views.aco, name="aco"),
     path('pso/', views.pso, name="pso"),
     path('find_solution', views.find_solution, name='find_solution'),
-    path('download/', views.download_file, name='download_file'),
+    # path('download/', views.download_file, name='download_file'),
 ]
     
